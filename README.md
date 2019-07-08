@@ -21,3 +21,7 @@
 - 아래 명령으로 github deeplearningzerotoall/TensorFlow 코드가 포함된 본 repository를 내려 받으세요. (이제 jupyter notebook에서 deeplearningzerotoall/TensorFlow 코드를 사용할 수 있습니다.)
 
     `git clone https://github.com/sungalex/Speech-to-Text.git`
+
+## Digital Signal 개요
+
+[digital_signal_processing.md](digital_signal_processing.md)
