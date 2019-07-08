@@ -6,7 +6,7 @@
 
 - 시간에 따른 기압의 분포(여러 개 주파수의 합이 신호의 세기로 나타남) : 일정한 시간을 주기로 측정한 기압의 차이
 
-  ![FFT](./img/FFT.png)
+  ![FFT](./img/FFT.PNG)
 
 - $F = \Large \frac{1}{T}$
   - F: Frequency
