@@ -23,7 +23,15 @@
 
     `docker run -i -t --name tf -p 8888:8888 -p 6006:6006 deeplearningzerotoall/tensorflow`
 
-    - 위 명령 실행 후 나타나는 URL 주소를 웹 브라우저에 붙여넣기 하면 jupyter notebook에 접속 됩니다.(http://localhost:8888/?token=62d657f6a1ca13df9c26859ed2ab36b80e85cd72a7d3fd5a 와 같은 토큰이 포함된 URL)
+    - 위 명령 실행 후 나타나는 URL 주소를 웹 브라우저에 붙여넣기 하면 jupyter notebook에 접속 됩니다.<br>
+      (http://localhost:8888/?token=62d657f6a1ca13df9c26859ed2ab36b80e85cd72a7d3fd5a 와 같은 토큰이 포함된 URL)
+    - token을 잊어버린 경우, http://localhost:8888/ 에 접속하면, 실행중인 jupyter notebook list를 확인할 수 있는 방법을 알려줍니다.<br>
+      아래 명령으로 container에 접속해서, 실행중인 jupyter notebook list에서 token을 확인 할 수 있습니다.
+
+      `docker exec -it tf /bin/bash`
+
+      `jupyter notebook list`
+
 
 - 명령 창을 하나 더 띄워서 docker 프로세스를 확인 합니다.
 
