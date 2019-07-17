@@ -22,7 +22,6 @@
 
 - [digital_signal_processing.md](digital_signal_processing.md)
 
-
 ## 음성인식 관련 설명 자료
 
 - Medium 자료 : [딥러닝(Deep Learning)을 이용한 음성 인식(Speech Recognition)](https://medium.com/@jongdae.lim/%EA%B8%B0%EA%B3%84-%ED%95%99%EC%8A%B5-machine-learning-%EC%9D%80-%EC%A6%90%EA%B2%81%EB%8B%A4-part-6-eb0ed6b0ed1d)
@@ -30,3 +29,7 @@
 - 오디오 신호 잡음 제거 기술 (딥러닝) : [A Wavenet for Speech Denoising](http://www.jordipons.me/apps/speech-denoising-wavenet/25.html)
 
 - [은닉마코프모델(Hidden Markov Models) 설명자료](https://ratsgo.github.io/machine%20learning/2017/03/18/HMMs/)
+
+## Google Cloud Speech-to-Text / Text-to-Speech
+
+- [Google Cloud Speech-to-Text 개발환경 설정하기](https://github.com/sungalex/VoiceMagic/blob/master/google%20cloud%20speech-to-text%20%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%20%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.pdf)
