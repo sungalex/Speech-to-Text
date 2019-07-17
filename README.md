@@ -33,3 +33,4 @@
 ## Google Cloud Speech-to-Text / Text-to-Speech
 
 - [Google Cloud Speech-to-Text 개발환경 설정하기](https://github.com/sungalex/VoiceMagic/blob/master/google%20cloud%20speech-to-text%20%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%20%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.pdf)
+
