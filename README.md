@@ -43,6 +43,11 @@
 
 ## kaldi 설치 하기(Kaldi 도커 파일 생성 과정)
 
+- docker 환경설정 변경(docker icon > settings > Advanced)
+  - CPU: 8Core
+  - RAM: 8Giga 이상
+  - SWAP: 2Giga
+  - HDD: 64Giga
 - git clone https://github.com/kaldi-asr/kaldi.git
 - cd kaldi/misc/docker/ubuntu
 - 도커파일(Dockerfile) 내용 변경 (내용 설명) : [Dockerfile_modified](Dockerfile_modified) 참조
