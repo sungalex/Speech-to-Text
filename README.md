@@ -34,3 +34,19 @@
 
 - [Google Cloud Speech-to-Text 개발환경 설정하기](https://github.com/sungalex/VoiceMagic/blob/master/google%20cloud%20speech-to-text%20%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%20%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.pdf)
 
+## Urban Sound Dataset 기반 HMM-DNN 실습(End-to-End 기법)
+
+- UrbanSound8K 구글 드라이브 링크 주소 : [link](https://drive.google.com/open?id=176DIx-0_uYWUuMD8oO57utQwhchsnmlW)
+  - 압축풀기 : tar -zxvf UrbanSound8K.tar.gz
+- Pytorch 및 패키지 추가 설치 : ???
+- [실습코드](docs/urbansound8k_classifier_spectrogram_updated.ipynb)
+
+## kaldi 설치 하기(Kaldi 도커 파일 생성 과정)
+
+- git clone https://github.com/kaldi-asr/kaldi.git
+- cd kaldi/misc/docker/ubuntu
+- 도커파일(Dockerfile) 내용 변경 (내용 설명) : [Dockerfile_modified](Dockerfile_modified) 참조
+  - "apt-get install"에 "unzip vim htop" 추가
+  - WORKDIR /usr/local/kaldi/tools 아래에 "RUN extras/install_mkl.sh" 추가
+- docker build --tag kaldi-ubuntu:kaldi-ubuntu .
+- docker run -it --name kaldi kaldi-ubuntu:kaldi-ubuntu bash
