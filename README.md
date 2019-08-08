@@ -48,10 +48,19 @@
   - RAM: 8Giga 이상
   - SWAP: 2Giga
   - HDD: 64Giga
-- git clone https://github.com/kaldi-asr/kaldi.git
+- git clone [https://github.com/kaldi-asr/kaldi.git](https://github.com/kaldi-asr/kaldi.git)
 - cd kaldi/misc/docker/ubuntu
 - 도커파일(Dockerfile) 내용 변경 (내용 설명) : [Dockerfile_modified](Dockerfile_modified) 참조
   - "apt-get install"에 "unzip vim htop" 추가
   - WORKDIR /usr/local/kaldi/tools 아래에 "RUN extras/install_mkl.sh" 추가
 - docker build --tag kaldi-ubuntu:kaldi-ubuntu .
 - docker run -it --name kaldi kaldi-ubuntu:kaldi-ubuntu bash
+
+## Seq2Seq 학습자료
+
+- [https://wikidocs.net/24996](https://wikidocs.net/24996)
+- [https://tykimos.github.io/2018/09/14/ten-minute_introduction_to_sequence-to-sequence_learning_in_Keras/](https://tykimos.github.io/2018/09/14/ten-minute_introduction_to_sequence-to-sequence_learning_in_Keras/)
+
+## Kaldi 실습 (Kaldi 환경 구축)
+
+[Kaldi 환경 구축](kaldi_guide.md)

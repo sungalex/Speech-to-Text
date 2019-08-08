@@ -59,4 +59,20 @@
 
     `docker rm tf`
 
-- Docker 컨테이너(Container) 커밋(Commit)하기 : [참고 사이트](https://nicewoong.github.io/development/2018/03/06/docker-commit-container/)
+## 도커 허브를 이용한 image backup 및 재설치
+
+- Docker 컨테이너(Container) 커밋(Commit) 및 이미지(Image) 푸시(Push) 하기 : [참고 사이트](https://nicewoong.github.io/development/2018/03/06/docker-commit-container/)
+
+### 도커 허브를 이용한 백업 과정
+
+    >> docker commit tf (도커허브 아이디)/tf:20190724
+    >> docker login
+       (도커허브 아이디, 패스워드 입력)
+    >> docker push (도커허브 아이디)/tf:20190724
+
+### 도커 허브를 이용한 도커 생성 과정
+
+    (): 본인에 맞도록 수정 사항 
+    >> docker login
+    >> docker pull (cloudai/tf:20190725)
+    >> docker run -i -t --name (tf_20190725) -p 8888:8888 -p 6006:6006 (cloudai/tf:20190725) /bin/bash
