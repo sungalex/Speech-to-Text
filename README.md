@@ -36,9 +36,16 @@
 
 ## Urban Sound Dataset 기반 HMM-DNN 실습(End-to-End 기법)
 
+- Deep Learning Zero to All - PyTorch : [https://github.com/deeplearningzerotoall/PyTorch.git](https://github.com/deeplearningzerotoall/PyTorch.git)
 - UrbanSound8K 구글 드라이브 링크 주소 : [link](https://drive.google.com/open?id=176DIx-0_uYWUuMD8oO57utQwhchsnmlW)
   - 압축풀기 : tar -zxvf UrbanSound8K.tar.gz
-- Pytorch 및 패키지 추가 설치 : ???
+- Pytorch 및 패키지 추가 설치
+  - sudo apt-get update
+  - sudo apt-get install sox libsox-dev libsox-fmt-all
+- torchaudio 설치
+  - pip3 install torchaudio -f https://download.pytorch.org/whl/torch_stable.html
+- 주피터 노트북 실행
+  - sh run_jupyter_docker.sh
 - [실습코드](docs/urbansound8k_classifier_spectrogram_updated.ipynb)
 
 ## kaldi 설치 하기(Kaldi 도커 파일 생성 과정)
