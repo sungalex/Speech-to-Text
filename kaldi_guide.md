@@ -23,6 +23,30 @@
     set encoding=utf-8
     set fileencoding=utf-8
 
+## Bash 명령어
+
+(1) 사용자 등록 (root 권한으로 등록)
+
+    >> adduser alex
+    (패스워드 입력)
+
+(2) 사용자 변경 
+
+    >> su alex
+
+(3) who (접속 사용자 목록 보기)
+
+    >> who
+
+(4) htop (현재 CPU 및 메모리 사용량 확인)
+
+    >> htop
+
+(5) Redirection (>, >>, <, <<), PIPE(|)
+
+    >> find ./wav/*.wav > wav_list.txt
+    >> find -name "*.wav" -type f | grep wav
+
 ## 음성 데이터 준비 및 전처리 과정
 
     * 아래의 {user_name}은 각자 본인의 아이디로 변경함
