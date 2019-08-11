@@ -158,4 +158,16 @@
 
 ## 한국어 음성인식 시스템 구축 (5/5)
 
-TBD
+(1) SRILM 기반 언어 모델링
+
+    (alex) >> cd ~/alex/kaldi/egs/zeroth_korean/s5/
+    (alex) >> mkdir lm
+    (alex) >> gdown --id 13E5Zj48etapXX7nCd3maMjAAmJ9fKnLA --output sejong_written.txt
+    (alex) >> morfessor -e 'utf-8' -t sejong_written.txt -s sejong_written.mmodel   (시간이 오래 걸려 멈춤)
+    (alex) >> morfessor -e 'utf-8' -l ../data/local/lm/zeroth_morfessor.seg -T sejong_written.txt -o sejong_written.seg.txt --output-format '{analysis} ' --output-newlines
+    (alex) >> ngram-count -text sejong_written.seg.txt -write-vocab training.vocab -limit-vocab 200000 -write1 unigram.freq
+    (alex) >> sort -n -r -k 2 unigram.freq | head -n 200000 | cut -f 1 > training.200k.vocab
+    (alex) >> ngram-count -vocab training.200k.vocab -text sejong_written.seg.txt -order 3 -write training.count
+    (alex) >> ngram-count -vocab training.200k.vocab -read training.count -order 3 -lm training.lm
+    (alex) >> head -n 2 sejong_written.seg.txt > test.txt
+    (alex) >> ngram -vocab training.200k.vocab -order 3 -lm training.lm -ppl test.txt -debug 2
