@@ -20,9 +20,9 @@
 
 ## Digital Signal 개요
 
-- [digital_signal_processing.md](digital_signal_processing.md)
+- [음성인식 개요](digital_signal_processing.md)
 
-## 음성인식 관련 설명 자료
+### 음성인식 관련 설명 자료
 
 - Medium 자료 : [딥러닝(Deep Learning)을 이용한 음성 인식(Speech Recognition)](https://medium.com/@jongdae.lim/%EA%B8%B0%EA%B3%84-%ED%95%99%EC%8A%B5-machine-learning-%EC%9D%80-%EC%A6%90%EA%B2%81%EB%8B%A4-part-6-eb0ed6b0ed1d)
 
