@@ -1,6 +1,6 @@
 # Speech-to-Text(음성인식)
 
-## 모두를 위한 딥러닝 시즌2
+## 딥러닝 강의 및 Docker 설치 가이드 : 모두를 위한 딥러닝 시즌2
 
 - [https://www.edwith.org/boostcourse-dl-tensorflow](https://www.edwith.org/boostcourse-dl-tensorflow)
 
@@ -38,36 +38,38 @@
 
 - Deep Learning Zero to All - PyTorch : [https://github.com/deeplearningzerotoall/PyTorch.git](https://github.com/deeplearningzerotoall/PyTorch.git)
 - UrbanSound8K 구글 드라이브 링크 주소 : [link](https://drive.google.com/open?id=176DIx-0_uYWUuMD8oO57utQwhchsnmlW)
-  - 압축풀기 : tar -zxvf UrbanSound8K.tar.gz
+  - 압축풀기 : `tar -zxvf UrbanSound8K.tar.gz`
 - Pytorch 및 패키지 추가 설치
-  - sudo apt-get update
-  - sudo apt-get install sox libsox-dev libsox-fmt-all
+  - `sudo apt-get update`
+  - `sudo apt-get install sox libsox-dev libsox-fmt-all`
+  - `pip3 install torch torchvision`
 - torchaudio 설치
-  - pip3 install torchaudio -f https://download.pytorch.org/whl/torch_stable.html
+  - `pip3 install torchaudio -f https://download.pytorch.org/whl/torch_stable.html`
 - 주피터 노트북 실행
-  - sh run_jupyter_docker.sh
-- [실습코드](docs/urbansound8k_classifier_spectrogram_updated.ipynb)
+  - `sh run_jupyter_docker.sh`
+- 실습코드 : [실습용 주피터 노트북 파일](docs/urbansound8k_classifier_spectrogram_updated.ipynb)
 
 ## kaldi 설치 하기(Kaldi 도커 파일 생성 과정)
 
-- docker 환경설정 변경(docker icon > settings > Advanced)
+- docker 환경설정 변경(windows인 경우 docker icon > settings > Advanced)
   - CPU: 8Core
   - RAM: 8Giga 이상
   - SWAP: 2Giga
   - HDD: 64Giga
-- git clone [https://github.com/kaldi-asr/kaldi.git](https://github.com/kaldi-asr/kaldi.git)
-- cd kaldi/misc/docker/ubuntu
+- `git clone https://github.com/kaldi-asr/kaldi.git`
+- `cd kaldi/misc/docker/ubuntu`
 - 도커파일(Dockerfile) 내용 변경 (내용 설명) : [Dockerfile_modified](Dockerfile_modified) 참조
   - "apt-get install"에 "unzip vim htop" 추가
   - WORKDIR /usr/local/kaldi/tools 아래에 "RUN extras/install_mkl.sh" 추가
-- docker build --tag kaldi-ubuntu:kaldi-ubuntu .
-- docker run -it --name kaldi kaldi-ubuntu:kaldi-ubuntu bash
+- `docker build --tag kaldi-ubuntu:kaldi-ubuntu .`
+- `docker run -it --name kaldi kaldi-ubuntu:kaldi-ubuntu bash`
+
+## kaldi 실습 (Kaldi 환경 구축)
+
+- [kaldi 환경 구축](kaldi_guide.md)
 
 ## Seq2Seq 학습자료
 
-- [https://wikidocs.net/24996](https://wikidocs.net/24996)
-- [https://tykimos.github.io/2018/09/14/ten-minute_introduction_to_sequence-to-sequence_learning_in_Keras/](https://tykimos.github.io/2018/09/14/ten-minute_introduction_to_sequence-to-sequence_learning_in_Keras/)
-
-## Kaldi 실습 (Kaldi 환경 구축)
-
-[Kaldi 환경 구축](kaldi_guide.md)
+- 딥 러닝을 이용한 자연어 처리 입문 - [시퀀스-투-시퀀스(Sequence-to-Sequence, seq2seq)](https://wikidocs.net/24996)
+- [케라스를 이용해 seq2seq를 10분안에 알려주기](https://tykimos.github.io/2018/09/14/ten-minute_introduction_to_sequence-to-sequence_learning_in_Keras/)
+- RNN 관련 자료: [ratsgo's blog - RNN과 LSTM을 이해해보자](https://ratsgo.github.io/natural%20language%20processing/2017/03/09/rnnlstm/)
