@@ -73,3 +73,18 @@
 - 딥 러닝을 이용한 자연어 처리 입문 - [시퀀스-투-시퀀스(Sequence-to-Sequence, seq2seq)](https://wikidocs.net/24996)
 - [케라스를 이용해 seq2seq를 10분안에 알려주기](https://tykimos.github.io/2018/09/14/ten-minute_introduction_to_sequence-to-sequence_learning_in_Keras/)
 - RNN 관련 자료: [ratsgo's blog - RNN과 LSTM을 이해해보자](https://ratsgo.github.io/natural%20language%20processing/2017/03/09/rnnlstm/)
+
+## 음성인식 프로젝트
+
+### 음성인식 실습 환경 구축 (Local PC + Anaconda + Jupyter Lab)
+
+    (Anaconda Prompt) >> D:
+    (Anaconda Prompt) >> mkdir seq2seq
+    (Anaconda Prompt) >> cd seq2seq
+    (Anaconda Prompt) >> conda create -n cuda python=3.6.5 pip ipykernel 
+    (Anaconda Prompt) >> conda activate cuda
+    (Anaconda Prompt) >> conda install pytorch torchvision cudatoolkit=10.0 -c pytorch  (본인의 환경에 따라 명령어가 달라짐. https://pytorch.org 참조)
+    (Anaconda Prompt) >> pip install gdown librosa python-Levenshtein jupyterlab
+    (Anaconda Prompt) >> jupyter lab --port 8889
+    (JupyterLab Terminal) >> gdown --id 1H02H4-ema1NeiHfBPSrqqopNiwcvtovf --output db.tar.gz
+    (JupyterLab Terminal) >> tar xvfz db.tar.gz
